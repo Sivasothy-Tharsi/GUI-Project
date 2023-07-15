@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "f0/8G6kprxTTjcC8nedmP8ujNuAeDOkBbKSStnLiYjbEv2z+KaAYM8TuCT4R7L70yOAmEiVGN+DxkIzE1xbAIg==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\tharsi\\Desktop\\GUI_FINAl\\POS\\TestProject1\\TestProject1.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Project Desktop is not compatible with net6.0 (.NETCoreApp,Version=v6.0). Project Desktop supports: net6.0-windows7.0 (.NETCoreApp,Version=v6.0)",
+      "libraryId": "Desktop",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
+}

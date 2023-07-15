@@ -1,0 +1,107 @@
+﻿<UserControl x:Class="Desktop.View.StockView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Desktop.View"
+             xmlns:vm="clr-namespace:Desktop.VM"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="600">
+    <UserControl.DataContext>
+        <vm:StockVM/>
+    </UserControl.DataContext>
+    <Grid>
+        <Rectangle HorizontalAlignment="Center" Height="500" Stroke="Transparent" Width="600" RadiusX="35.9" RadiusY="35.9" StrokeThickness="0" Fill="White"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10" HorizontalAlignment="Center">
+                <Border BorderBrush="Black" BorderThickness="2" VerticalAlignment="Top" Height="100" Margin="10 50" Width="100" CornerRadius="20,10,20,10">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0.1,0.8" EndPoint="0.1,0.2">
+                            <GradientStop Color="DarkCyan"  Offset="0.9"/>
+                            <GradientStop Color="WhiteSmoke" Offset="0.1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <StackPanel Orientation="Vertical" Background="Transparent" Margin="0 10 0 0" VerticalAlignment="Center">
+                        <TextBlock Text="Product" HorizontalAlignment="Center" FontSize="20" FontFamily="Amiri" FontWeight="Bold"/>
+                        <TextBlock Text="{Binding ProCount}" HorizontalAlignment="Center" FontSize="20" FontFamily="Amiri" FontWeight="Bold"/>
+                    </StackPanel>
+                </Border>
+
+                <Border BorderBrush="Black" BorderThickness="2" VerticalAlignment="Top" Height="100" Margin="10 50" Width="100" CornerRadius="20,10,20,10">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0.1,0.8" EndPoint="0.1,0.2">
+                            <GradientStop Color="DarkCyan" Offset="0.9"/>
+                            <GradientStop Color="WhiteSmoke" Offset="0.1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <StackPanel Orientation="Vertical" Background="Transparent" Margin="0 10 0 0" VerticalAlignment="Center">
+                        <TextBlock Text="Category" HorizontalAlignment="Center" FontSize="20" FontFamily="Amiri" FontWeight="Bold"/>
+                        <TextBlock Text="{Binding CatCount}" HorizontalAlignment="Center" FontSize="20" FontFamily="Amiri" FontWeight="Bold"/>
+                    </StackPanel>
+                </Border>
+
+                <Border BorderBrush="Black" BorderThickness="2" VerticalAlignment="Top" Height="100" Margin="10 50" Width="100" CornerRadius="20,10,20,10">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0.1,0.8" EndPoint="0.1,0.2">
+                            <GradientStop Color="DarkCyan" Offset="0.9"/>
+                            <GradientStop Color="WhiteSmoke" Offset="0.1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <StackPanel Orientation="Vertical" Background="Transparent" Margin="0 10 0 0" VerticalAlignment="Center">
+                        <TextBlock Text="Purchase" HorizontalAlignment="Center" FontSize="20" FontFamily="Amiri" FontWeight="Bold"/>
+                        <TextBlock Text="{Binding BillCount}" HorizontalAlignment="Center" FontSize="20" FontFamily="Amiri" FontWeight="Bold"/>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="20 0" HorizontalAlignment="Center">
+                <Border BorderBrush="Black" BorderThickness="1">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Product detail" HorizontalAlignment="Center"/>
+                        <DataGrid Style="{StaticResource CustomDataGridStyle}" CanUserAddRows="False" AutoGenerateColumns="False" CanUserDeleteRows="False" Margin="20"
+                       ItemsSource="{Binding Products, UpdateSourceTrigger=PropertyChanged}">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Product" Binding="{Binding ProductName}"/>
+                                <DataGridTextColumn Header="Quantity" Binding="{Binding QuantityInStock}"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </StackPanel>
+                </Border>
+                
+                <Border BorderBrush="Black" BorderThickness="1">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Category detail" HorizontalAlignment="Center"/>
+                        <DataGrid Style="{StaticResource CustomDataGridStyle}" CanUserAddRows="False" AutoGenerateColumns="False"
+                       ItemsSource="{Binding Categories, UpdateSourceTrigger=PropertyChanged}" Margin="20">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Category" Binding="{Binding CategoryName}"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </StackPanel>
+                </Border>
+
+                <Border BorderBrush="Black" BorderThickness="1">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Invoice detail" HorizontalAlignment="Center"/>
+                        <DataGrid Style="{StaticResource CustomDataGridStyle}" CanUserAddRows="False" AutoGenerateColumns="False"
+                       ItemsSource="{Binding Bills, UpdateSourceTrigger=PropertyChanged}" Margin="20">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Id" Binding="{Binding BillId}"/>
+                                <DataGridTextColumn Header="Customer" Binding="{Binding Order.Customer.CustomerName }"/>
+                                <DataGridTextColumn Header="Total cost" Binding="{Binding TotalAmount}"/>
+                            </DataGrid.Columns>
+
+                        </DataGrid>
+                    </StackPanel>
+
+                </Border>
+                
+            </StackPanel>
+        </Grid>
+        
+    </Grid>
+</UserControl>

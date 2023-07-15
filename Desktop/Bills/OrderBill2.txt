@@ -1,0 +1,16 @@
+------------------------------------
+            ORDER BILL              
+------------------------------------
+
+Customer Name: Siva
+
+Order Items:
+
+Orange x 5 - $900.00
+Monobar x 1 - $550.00
+
+Total Amount: $1,450.00
+Discount: 0%
+Discount: 1450.0%
+
+------------------------------------

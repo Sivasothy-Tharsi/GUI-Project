@@ -1,0 +1,120 @@
+﻿<Window x:Class="Desktop.View.LoginView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:Desktop.View"
+        xmlns:VM="clr-namespace:Desktop.VM"
+        mc:Ignorable="d"
+        Title="LoginView" Height="500" Width="800" 
+        WindowStartupLocation="CenterScreen" 
+        AllowsTransparency="True" WindowStyle="None"
+        Background="Transparent"
+        ResizeMode="NoResize" FontFamily="Forte">
+    <Window.DataContext>
+        <VM:LoginVM/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0"  Background="Transparent">
+            <Border CornerRadius="20 0 0 20">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="1.5 0.5" EndPoint="0.5 1.5">
+                        <!--<GradientStop Color="#FF3232E0" Offset="0.1"/>-->
+                        <GradientStop Color="DarkCyan" Offset="0.1"/>
+
+                        <GradientStop Color="White" Offset="1.5"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+            <TextBlock Text="BERRY" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="50" Margin="0,39,0,0">
+                <TextBlock.Effect>
+                    <DropShadowEffect Color="Black" ShadowDepth="2" BlurRadius="2" Opacity="0.7" Direction="0"/>
+                </TextBlock.Effect>
+                <TextBlock.Foreground>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                        <GradientStop Offset="0" Color="Purple" />
+                        <GradientStop Offset="1" Color="White" />
+                    </LinearGradientBrush>
+                </TextBlock.Foreground>
+            </TextBlock>
+            <TextBlock Text="POS" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="30" Margin="161,93,0,0">
+                <TextBlock.Effect>
+                    <DropShadowEffect Color="Black" ShadowDepth="2" BlurRadius="2" Opacity="0.7" Direction="0"/>
+                </TextBlock.Effect>
+                <TextBlock.Foreground>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                        <GradientStop Offset="0" Color="CornflowerBlue" />
+                        <GradientStop Offset="1" Color="White" />
+                    </LinearGradientBrush>
+                </TextBlock.Foreground>
+            </TextBlock>
+            <Image Source="/Image/POS.png" VerticalAlignment="Top" Margin="8,113,9,0" Height="163">
+                <Image.Effect>
+                    <DropShadowEffect Color="Black" ShadowDepth="5" BlurRadius="10" Opacity="0.5"/>
+                </Image.Effect>
+            </Image>
+            <Canvas>
+                <Polygon Points="0 20 230 140 0 270" Fill="WhiteSmoke" VerticalAlignment="Top" HorizontalAlignment="Center" Canvas.Top="230" Opacity="0.08"  />
+            </Canvas>
+            <TextBlock Text="LOG IN" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="30" Margin="32,345,0,0">
+                <TextBlock.Effect>
+                    <DropShadowEffect Color="Black" ShadowDepth="3" BlurRadius="2" Opacity="0.7" Direction="0"/>
+                </TextBlock.Effect>
+                <TextBlock.Foreground>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                        <GradientStop Offset="0" Color="WhiteSmoke" />
+                        <GradientStop Offset="1" Color="White" />
+                    </LinearGradientBrush>
+                </TextBlock.Foreground>
+            </TextBlock>
+            <TextBlock Text="Unlock your world, with a key of trust, where dreams and security meet." VerticalAlignment="Top" Margin="32,391,10,0" TextWrapping="Wrap" TextAlignment="Left" Foreground="White"/>
+        </Grid>
+        <Grid Grid.Column="1"  Background="Transparent">
+            <Border CornerRadius="0 20 20 0" Background="White"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Border Background="DarkCyan" CornerRadius="0 20 20 20" BorderThickness="0">
+                        <Rectangle Fill="DarkCyan" Margin="0,0,0,250" Grid.RowSpan="2" RadiusX="17.889" RadiusY="17.889"/>
+                    </Border>
+                    <Button  HorizontalAlignment="Right" Height="40" Background="Transparent" BorderBrush="Transparent" Command="{Binding ShutdownCommand}" Margin="10" VerticalAlignment="Top">
+                        <md:PackIcon Kind="Shutdown" Foreground="White" Width="40" Height="35"/>
+                    </Button>
+
+                </Grid>
+                <Grid Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Center" >
+                    <Canvas/>
+                    <Border BorderBrush="Transparent" BorderThickness="1" CornerRadius="20" Margin="75,-103,75,60" Background="White">
+                        <Border.Effect>
+                            <DropShadowEffect Color="Black" ShadowDepth="2" BlurRadius="8" Direction="0"/>
+                        </Border.Effect>
+                        <StackPanel  VerticalAlignment="Top" Width="400" Height="300" >
+                            <StackPanel>
+                                <TextBox Text="{Binding Username}" Margin="10,30" md:HintAssist.Hint="User name" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="18" Width="341"/>
+                                <PasswordBox md:PasswordBoxAssist.Password="{Binding Password}"  Margin="10,10" md:HintAssist.Hint="Password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" FontFamily="Champagne &amp; Limousines" FontSize="18" Width="349"/>
+                            </StackPanel>
+
+                            <Button Style="{x:Null}"  Background="Transparent" BorderBrush="Transparent" FontSize="10" HorizontalContentAlignment="Left" Margin="25 20" Width="85" HorizontalAlignment="Left" Command="{Binding ForgotPasswordCommand}">
+                                <TextBlock Text="Forgot password ?"/>
+                            </Button>
+                            <StackPanel Orientation="Horizontal" Height="Auto" Margin="0" HorizontalAlignment="Center">
+                                <Button Width="100" Style="{StaticResource btnLogin}" Content="Login"  Command="{Binding LoginCommand}" Height="30" FontFamily="Frank Ruhl Hofshi" Margin="10 0"/>
+                                <Button Content="Sign up" Style="{StaticResource btnLogin}" Command="{Binding RegisterCommand}" BorderBrush="Transparent" Margin="30 0" FontSize="16" FontFamily="Constantia" Height="30" Width="100"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+
+
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

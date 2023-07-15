@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="View\AddUserView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\BillView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\CategoryView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\CustomerView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Dashboard.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\EditOrderItemView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ForgotPassword.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\HomeView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\LoginView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Or.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\OrderView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ProductView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\RigisterView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\StockView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\UserInfoView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\UserView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\AddUserView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\BillView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\CategoryView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\CustomerView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Dashboard.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\EditOrderItemView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ForgotPassword.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\HomeView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\LoginView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Or.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\OrderView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ProductView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\RigisterView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\StockView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\UserInfoView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\UserView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

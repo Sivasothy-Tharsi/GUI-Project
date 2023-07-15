@@ -1,0 +1,58 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Image\4.png" />
+    <None Remove="Image\AddUser.png" />
+    <None Remove="Image\Cart.png" />
+    <None Remove="Image\category.png" />
+    <None Remove="Image\CreateAccount.png" />
+    <None Remove="Image\Customer.png" />
+    <None Remove="Image\Home1.png" />
+    <None Remove="Image\Home2.png" />
+    <None Remove="Image\POS.png" />
+    <None Remove="Image\POSsystem.png" />
+    <None Remove="Image\stocks.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.0" />
+    <PackageReference Include="FontAwesome.WPF" Version="4.7.0.9" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.9.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Image\4.png" />
+    <Resource Include="Image\AddUser.png" />
+    <Resource Include="Image\Cart.png" />
+    <Resource Include="Image\category.png" />
+    <Resource Include="Image\CreateAccount.png" />
+    <Resource Include="Image\Customer.png" />
+    <Resource Include="Image\Home1.png" />
+    <Resource Include="Image\Home2.png" />
+    <Resource Include="Image\POS.png" />
+    <Resource Include="Image\POSsystem.png" />
+    <Resource Include="Image\stocks.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Bills\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,14 @@
+﻿<UserControl x:Class="Desktop.View.HomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Desktop.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="600" Background="Transparent">
+    <Grid>
+        <Rectangle HorizontalAlignment="Center" Height="500" Stroke="#FF260753" VerticalAlignment="Center" Width="600" RadiusX="29.783" RadiusY="29.783" Fill="White" StrokeThickness="0.1"/>
+        <Image Source="/Image/Home1.png" HorizontalAlignment="Left" Height="343" VerticalAlignment="Top" Width="313" Margin="15,10,0,0"/>
+        <Image Source="/Image/Home2.png" HorizontalAlignment="Left" Height="344" VerticalAlignment="Top" Width="313" Margin="277,166,0,0"/>
+    </Grid>
+</UserControl>

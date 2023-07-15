@@ -1,0 +1,27 @@
+﻿<Window x:Class="Desktop.View.EditOrderItemView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Desktop.View"
+        xmlns:vm="clr-namespace:Desktop.VM"
+        mc:Ignorable="d"
+        Title="EditOrderItemView" Height="220" Width="200"
+        WindowStyle="None">
+    <Window.DataContext>
+        <vm:edit_orderVM/>
+    </Window.DataContext>
+    <Grid>
+        <StackPanel Orientation="Vertical" VerticalAlignment="Top" Margin="10 20">
+            <TextBlock Text="ProductName"/>
+            <TextBlock Text="{Binding NewItem.Product.ProductName}"/>
+            <TextBlock Text="Quantity in stock"/>
+            <TextBlock Text="{Binding NewItem.Product.QuantityInStock}"/>
+            <TextBlock Text="Quantity"/>
+            <TextBox Text="{Binding NewItem.Quantity}"/>
+            <Button Content="Ok" Command="{Binding SaveCommand}"/>
+            <Button Content="Cancel" Command="{Binding CancelCommand}"/>
+
+        </StackPanel>
+    </Grid>
+</Window>
